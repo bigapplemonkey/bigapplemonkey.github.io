@@ -33,15 +33,15 @@ $(document).ready(function() {
     var whiteBackClass = 'white-background';
 
     function updatePage() {
+        //opacity linear function
+        var opa = 0.55 + ($(this).scrollTop() * ((0.15 - 0.55) / 454));
+        //parallax rate
+        var yPos = -($(this).scrollTop() / 1.75);
+        if (yPos < -250) yPos = -250; //limits parallax image displacing
+        var coords = '75% ' + yPos + 'px';
 
-        if (true) {
-            //opacity linear function
-            var opa = 0.55 + ($(this).scrollTop() * ((0.15 - 0.55) / 454));
-            //parallax rate
-            var yPos = -($(this).scrollTop() / 1.75);
-            if (yPos < -250) yPos = -250; //limits parallax image displacing
-            var coords = '75% ' + yPos + 'px';
-
+        //letting the browser take care of the frame updates
+        requestAnimationFrame(function() {
             //makes nav bar sticky
             if ($(this).scrollTop() >= navDistance) {
                 navSel.addClass(stickyClass);
@@ -80,20 +80,13 @@ $(document).ready(function() {
                     });
                 }
             }
-        }
+        });
+
+
+
     }
 
     //parallax effect / sticky nav bar
     $(window).scroll(updatePage);
-
-    $(window).resize(function() {
-        var viewPortSize = $(document).width();
-        if (viewPortSize <= 767) {
-            navSel.removeClass(stickyClass);
-            titleSel.removeClass(leftClass);
-            transCoverSel.removeClass(whiteBackClass);
-        }
-        updatePage();
-    });
 
 });
