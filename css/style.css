@@ -335,6 +335,10 @@ a:hover {
     font-size: 1.1em;
 }
 
+.github-link {
+    margin-top: 9px;
+}
+
 @media screen and (max-width: 550px) {
     .title-medium {
         font-size: 22px;
