@@ -163,6 +163,11 @@ a:hover {
     opacity: 0.85;
 }
 
+.img-project1 {
+    width: 49%;
+    display: inline;
+}
+
 .clear-float {
     clear: both;
 }
