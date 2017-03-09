@@ -300,8 +300,8 @@ a:hover {
 
 .img-project {
     cursor: pointer;
-    opacity: 0.85;
-    -webkit-transition: opacity 0.4s;
+/*    opacity: 0.85;
+*/    -webkit-transition: opacity 0.4s;
     /* Safari */
     transition: opacity 0.4s;
 }
