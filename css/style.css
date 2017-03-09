@@ -101,7 +101,7 @@ a:hover {
 }
 
 .parallax-image {
-    background: url(../images/testing.jpg) 75% 0 no-repeat fixed;
+    background: url(../images/testing-large.jpg) 75% 0 no-repeat fixed;
     min-height: 100%;
     width: 100%;
     position: fixed;
@@ -473,7 +473,7 @@ a:hover {
     .mobile-jumbotron {
         position: absolute;
         width: 100%;
-        background: url(../images/testing.jpg) 75% 0 no-repeat;
+        background: url(../images/testing-large.jpg) 75% 0 no-repeat;
         opacity: 0.55;
         top: -25px;
         height: 610px;

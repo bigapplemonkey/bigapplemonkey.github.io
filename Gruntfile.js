@@ -29,7 +29,24 @@ module.exports = function(grunt) {
                     ext: '.min.css'
                 }]
             }
-        }
+        },
+        responsive_images: {
+            myTask: {
+                options: {
+                    sizes: [{
+                        name: 'large',
+                        width: 2048,
+                        quality: 50
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    src: ['**.{jpg,gif,png}'],
+                    cwd: 'toOptimize/',
+                    dest: 'optimized/'
+                }]
+            }
+        },
 
     });
 
@@ -37,8 +54,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-responsive-images');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
+    grunt.registerTask('default', ['concat', 'uglify', 'cssmin', 'responsive_images']);
 
 };
