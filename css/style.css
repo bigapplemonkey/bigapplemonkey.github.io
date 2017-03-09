@@ -59,6 +59,10 @@ a:active {
     text-decoration: none;
 }
 
+a.underline {
+    text-decoration: underline;
+}
+
 a,
 .btn-default {
     color: inherit;
