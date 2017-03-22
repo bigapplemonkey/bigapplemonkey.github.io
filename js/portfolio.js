@@ -4,6 +4,7 @@ $(window).on('beforeunload', function() {
 });
 
 $(document).ready(function() {
+    $('a').last().hide();
     //slow down page scrolling
     $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {
