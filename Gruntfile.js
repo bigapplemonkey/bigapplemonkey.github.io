@@ -34,7 +34,7 @@ module.exports = function(grunt) {
             myTask: {
                 options: {
                     sizes: [{
-                        name: 'large',
+                        name: 'large', //medium 640
                         width: 2048,
                         quality: 50
                     }]

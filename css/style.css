@@ -304,8 +304,9 @@ a:hover {
 
 .img-project {
     cursor: pointer;
-/*    opacity: 0.85;
-*/    -webkit-transition: opacity 0.4s;
+    /*    opacity: 0.85;
+*/
+    -webkit-transition: opacity 0.4s;
     /* Safari */
     transition: opacity 0.4s;
 }
@@ -343,7 +344,30 @@ a:hover {
     margin-top: 9px;
 }
 
+.other .box-photo {
+    width: 50%;
+}
+
+.other .box-project {
+    width: 50%;
+    padding-top: 1.5em;
+}
+
+.other .fluid-container {
+    margin-bottom: 1.5em;
+}
+
+.other.work {
+    margin-top: 2.3rem;
+}
+
 @media screen and (max-width: 550px) {
+    .other .box-photo {
+        width: 100%;
+    }
+    .other .box-project {
+        width: 100%;
+    }
     .title-medium {
         font-size: 22px;
     }
